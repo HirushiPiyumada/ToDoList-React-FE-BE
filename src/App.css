@@ -1,38 +1,173 @@
-.App {
+/* Container */
+.full {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 12px;
+  background-color: #fdfdfd;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+/* Heading */
+.headname {
   text-align: center;
+  color: #222;
+  margin-bottom: 25px;
+  font-size: 28px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Task Form */
+.task-form {
   display: flex;
-  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.task-input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: all 0.2s;
+}
+
+.task-input:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 6px rgba(74,144,226,0.5);
+  outline: none;
+}
+
+/* Add / Save Button */
+.add {
+  padding: 12px 22px;
+  background: linear-gradient(135deg, #4a90e2, #357ABD);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: all 0.2s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
+.add:hover {
+  background: linear-gradient(135deg, #357ABD, #2a5d91);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Clear Completed */
+.clear-button {
+  margin-left: 15px;
+  padding: 6px 14px;
+  background: linear-gradient(135deg, #9b59b6, #8e44ad);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.clear-button:hover {
+  background: linear-gradient(135deg, #8e44ad, #732d91);
+  transform: translateY(-2px);
+}
+
+/* Task List */
+.list {
+  margin-top: 20px;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.list-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* Task Text */
+.task-text {
+  flex: 1;
+  font-size: 16px;
+}
+
+.completed-task {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Task Buttons */
+.task-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-button,
+.delete-button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Edit */
+.edit-button {
+  background: linear-gradient(135deg, #f1c40f, #d4ac0d);
+  color: #fff;
+}
+
+.edit-button:hover {
+  background: linear-gradient(135deg, #d4ac0d, #b08a0a);
+  transform: translateY(-2px);
+}
+
+/* Delete */
+.delete-button {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: #fff;
+}
+
+.delete-button:hover {
+  background: linear-gradient(135deg, #c0392b, #a32b1e);
+  transform: translateY(-2px);
+}
+
+/* Checkbox */
+.task-checkbox {
+  margin-right: 12px;
+  width: 18px;
+  height: 18px;
+}
+
+/* Empty message */
+.empty-message {
+  text-align: center;
+  font-style: italic;
+  color: #999;
+}
+
+/* Summary */
+.task-summary {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
 }
